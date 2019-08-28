@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Index from './views/Index/Index';
+import ProyWall from './views/proyecto/proyWall';
+import PrivateProyWall from './views/proyecto/proyWallPrivate';
+import Header from './components/common/Header';
+import {Provider as AlertProvider} from 'react-alert';
+import AlertTemplate from 'react-alert-template-oldschool-dark';
+import {Provider as Redux} from "react-redux";
+import reduxStore from './store/store'
+
+import Footer from "./components/common/Footer";
 
 function App() {
+  const options = {
+    position: 'bottom center',
+    timeout: 4000,
+    offset: '30px',
+    transition: 'scale'
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Redux store={reduxStore}>
+        <Router>
+          <Header/>
+          <AlertProvider template={AlertTemplate} {...options}>
+            <Switch>
+              <Route exact path={'/'} component={Index}/>
+              <Route path={'/proy/:id'} component={ProyWall}/>
+              <Route path={'/intern/:id/:section'} component={PrivateProyWall}/>
+            </Switch>
+          </AlertProvider>
+        </Router>
+    </Redux>
   );
 }
-
 export default App;

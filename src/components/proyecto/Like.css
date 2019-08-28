@@ -1,0 +1,8 @@
+.laiked{
+    cursor: pointer;
+    color: greenyellow;
+}
+.notlaiked{
+    cursor: pointer;
+    color: darkblue;
+}

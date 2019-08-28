@@ -1,0 +1,424 @@
+/* Necesario para los comentarios, NO ES RESPONSIVE*/
+.thumbnail {
+    padding:0px;
+}
+.panel {
+    position:relative;
+    width: 100%;
+}
+.panel>.panel-heading:after,.panel>.panel-heading:before{
+    position:absolute;
+    top:11px;left:-16px;
+    right:100%;
+    width:0;
+    height:0;
+    display:block;
+    content:" ";
+    border-color:transparent;
+    border-style:solid solid outset;
+    pointer-events:none;
+}
+.panel>.panel-heading:after{
+    border-width:7px;
+    border-right-color:#f7f7f7;
+    margin-top:1px;
+    margin-left:2px;
+}
+.panel>.panel-heading{
+    background-color: #EDEDED;
+}
+.panel>.panel-heading:before{
+    border-right-color:#ddd;
+    border-width:8px;
+}
+
+/*---*/
+/* Estilos para mostrar los resources que son hijos de otro */
+.resource-row{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.resource-head{
+    padding: 2px 8px;
+    display: block;
+    border-bottom: 1px solid #EDEDED;
+}
+.navItem{
+    padding: 10px;
+    font-size: x-small;
+}
+.panel-footer{
+    padding: 2px 8px;
+    display: block;
+    border-top: 1px solid #EDEDED;
+    background-color: lightgray;
+}
+
+.panel-footer:before {
+    border-left: 5px black;
+}
+
+/*---*/
+.modal-header{
+    border-bottom: 1px solid grey;
+    padding-top: 20px !important;
+    padding-bottom: 5px !important;
+}
+.modal-title{
+    display: inline;
+}
+
+/* Estilos para mostrar la fila de botones con acciones que puedo realizar a MIS recursos. */
+.resource-buttons{
+    display: block;
+    padding: 5px 5px;
+}
+
+.form-group{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+label{
+    color: #1a1a1a !important;
+}
+
+/* Fonts */
+
+/* Titulos */
+@font-face {
+    font-family: "Soho MediumCond";
+    src: url("../fonts/SOHO-STD-MEDIUM-CONDENSED-5936ECEFA0A90.otf");
+}
+/* SubTitulos */
+@font-face {
+    font-family: "Soho ExtraLightCond";
+    src: url("../fonts/SOHO-STD-EXTRALIGHT-CONDENSED-5936E4BA9B94F.otf");
+}
+/* Textos */
+@font-face {
+    font-family: "Helvetica LighCond";
+    src: url("../fonts/HelveticaLTStd-LightCond.otf");
+}
+
+h1{
+    font-family: "Soho MediumCond", normal;
+    font-weight: 600;
+    margin: 5px;
+}
+h2{
+    font-family: "Soho MediumCond", normal;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bot: 5px
+}
+h3{
+    font-family: "Soho ExtraLightCond", normal;
+    font-weight: 1000;
+    margin-top: 5px;
+    font-size: 20px;
+}
+h4{
+    font-family: "Helvetica LighCond", normal;
+    font-weight: 500;
+    margin-top: 5px;
+}
+h5{
+    font-family: "Helvetica LighCondd", normal;    
+    font-weight: 500;
+}
+p{
+    font-family: "Helvetica LighCond", normal;
+    font-weight: 500;
+}
+label{
+    font-family: "Soho ExtraLightCond", normal;
+    font-weight: 500;
+}
+input{
+    font-family: "Soho ExtraLightCond", normal;
+    font-weight: 500;
+    color: #878787;
+}
+button{
+    font-family: "Helvetica LighCond", normal;
+    font-weight: 500;
+}
+th{
+    font-family: "Soho ExtraLightCond", normal;
+    font-weight: 700;
+    max-width: 100px;
+    font-size: 20px;
+}
+td{
+    font-family: "Soho ExtraLightCond", normal;
+    font-weight: 500;
+    max-width: 100px;
+    font-size: 18px;
+}
+img.go-back{
+    width: 100%;
+}
+.upload-link{
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+    border: 2px dashed #00aa9a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 16px;
+    color: #00aa9a;
+    font-family: "Helvetica LighCond";
+}
+.upload-link.Highlight {
+    background-color: rgb(188, 185, 236);
+}
+.act-newUser{
+    font-family: "Soho ExtraLightCond";
+    font-weight: 600;
+    color: rgb(232, 148, 53) ;
+}
+.act-newEtapa{
+    font-family: "Soho ExtraLightCond";
+    font-weight: 600;
+    color: #00aa9a ;
+}
+.act-hito{
+    border-left: 40px solid;
+}
+.act-hito-newUser{
+    border-color: rgb(232, 148, 53);
+}
+.act-hito-newEtapa{
+    border-color: #00aa9a;
+}
+.act-hito:first-child{
+    padding: 2% 5% 2% 3%;
+}
+.sidebar-info-title {
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-family: "Soho MediumCond";
+    color: #333;
+    border-bottom: 5px solid #00aa9a;
+}
+.modal-input{
+    color: grey;
+    font-family: "Helvetica LighCond";
+}
+.modal-textarea{
+    color: #878787;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+}
+.proy-colaborator {
+    font-family: "Soho ExtraLightCond";
+    font-weight: 400;
+    color: #00aa9a;
+}
+.container-fluid {
+    width: 94%;
+    margin: 0 3% 0 3%;
+}
+.btn_obs{
+    font-family: "Helvetica LighCond", normal;
+    background-color: #00897B;
+    color: white;
+    width: 40%;
+    padding: 6px 6px;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+div.col_rc_0{
+    padding-right: 0;
+    padding-left: 8px;
+}
+div.col_rc_1{
+    padding: 0;
+}
+a.btn{
+    padding: 0;
+    padding-right: 15px;
+    margin: 0;
+}
+div.progress{
+    margin-bottom: 3px;
+    height: 15px;
+}
+/*Imagenes*/
+img.img_25{
+    width: 25px;
+    height: 25px;
+}
+img.img_30{
+    width: 30px;
+    height: 30px;
+}
+
+img.img_40{
+    width: 40px;
+    height: 40px;
+    display: inline;
+}
+.list-group-item {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+/* Texto */
+.txt_left_panel{
+    text-transform: lowercase;
+    text-align: left;
+}
+.txt_left_panel h4{
+    margin: 0;
+    margin-top: 5%;
+    /*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; Letra con bordes*/
+}
+.sidebar-text{
+    padding-left: 5%;
+    text-decoration-line: underline;
+    display: inline;
+    color: #1a1a1a;
+}
+.vertical_center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* Filter */
+
+.dropdown {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+.dropbtn{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px black;
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ccc;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: #f1f1f1;
+}
+.filter_text{        
+    text-transform: capitalize;
+    margin-right: 5px;
+}
+.filter_stars{
+    width: 20px; 
+    display: inline;
+}
+.filter_img{
+    width: 30px;
+}
+.filter_col{
+    display: inline-block;
+    padding-right: 2.5%;
+}
+.filter_col2{
+    display: inline-block;
+    padding-right: 0;
+}
+
+/* Loader */
+
+.loader {
+    border: 12px solid #D3D3D3;
+    border-radius: 50%;
+    border-top: 12px solid #3498db;
+    width: 90px;
+    height: 90px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Estilo de calendario */
+
+.cal-month-day{
+    height: 54px;
+    max-height: 54px;
+    min-height: 54px;
+}
+.cal-day-inmonth{
+    height: 54px;
+    max-height: 54px;
+    min-height: 54px;
+}
+.cal-month-box .cal-cell{
+    height: 54px;
+    max-height: 54px;
+    min-height: 54px;
+}
+.cal-cell span{
+    margin-top: 0;
+}
+.cal-day-today{
+    margin-left: 2px;
+    font-size: 10px;
+}
+.cal-day-today span{
+    margin-bottom: 0px;
+}
+.events-list{
+    max-height: 30px;
+}
+.color-regular{
+    border-color: #00aa9a;
+}
+.color-help{
+    border-color: rgb(232, 148, 53);
+}
+.color-private{
+    border-color: rgb(238, 36, 112);
+}
+/* Colores
+azul: #6EA4CA
+fucsia: #E71D67
+gris_ #878787
+verde: #289B89
+naranjo: #E89525
+*/
+

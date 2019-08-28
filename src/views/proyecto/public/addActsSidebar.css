@@ -1,0 +1,23 @@
+.actSidebar{
+    margin: 5% 2% 3% 2% ;
+}
+.actSidebar-item{
+    cursor: pointer;
+    align-content: center;
+    justify-content: center;
+    font-family: "Helvetica LighCond";
+    color: #00aa9a;
+    text-decoration: underline;
+    margin: 3% 0 3% 0;
+}
+.actSidebar-icon{
+    width: 80%;
+    height: auto;
+    margin: 10%;
+}
+.actSidebar-title{
+    justify-content: center;
+    font-family: "Helvetica LighCond";
+    text-align: center;
+    font-size: medium;
+}

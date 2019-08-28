@@ -1,0 +1,13 @@
+UPDATE fabricaciones SET restantes = 0 WHERE idfabricaciones > 0;
+UPDATE fabricaciones SET restantes = 2	WHERE idfabricaciones = 16380;
+UPDATE fabricaciones SET restantes = 1	WHERE idfabricaciones = 16369;
+UPDATE fabricaciones SET restantes = 5	WHERE idfabricaciones = 16357;
+UPDATE fabricaciones SET restantes = 1	WHERE idfabricaciones = 16356;
+UPDATE fabricaciones SET restantes = 2	WHERE idfabricaciones = 16352;
+UPDATE fabricaciones SET restantes = 1	WHERE idfabricaciones = 16334;
+UPDATE fabricaciones SET restantes = 2	WHERE idfabricaciones = 16313;
+UPDATE fabricaciones SET restantes = 14	WHERE idfabricaciones = 16255;
+UPDATE fabricaciones SET restantes = 114 WHERE idfabricaciones = 16249;
+UPDATE fabricaciones SET restantes = 2	WHERE idfabricaciones = 16184;
+UPDATE fabricaciones SET restantes = 78	WHERE idfabricaciones = 15513;
+UPDATE fabricaciones SET restantes = 2 WHERE idfabricaciones = 16393;

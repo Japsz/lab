@@ -1,0 +1,15 @@
+.comment-space{
+    display: flex;
+}
+
+.comment-form > *{
+    display: inline-block;
+    height: available;
+}
+
+.comment-title{
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-family: "Soho MediumCond";
+    color: #333;
+}

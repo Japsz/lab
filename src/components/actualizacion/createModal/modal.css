@@ -1,0 +1,21 @@
+.actModal-title{
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-family: "Soho MediumCond";
+    color: #333;
+    border-bottom: 5px solid;
+}
+
+.actModal-bajada{
+    margin-top: 3%;
+}
+
+.actModal-Solucion{
+    border-color: #00aa9a;
+}
+.actModal-Imagen{
+    border-color: rgb(232, 148, 53);
+}
+.actModal-Video{
+    border-color: rgb(238, 36, 112);
+}
