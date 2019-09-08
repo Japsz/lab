@@ -14,6 +14,15 @@ export const initialState = {
   delAvanceSuccess: null,
   delAvanceResponse: {},
 
+  getAvanceLoading: null,
+  getAvanceError: null,
+  getAvanceSuccess: null,
+  getAvanceResponse: {
+    idavance: 0,
+    ansToken: [],
+    userToken: [],
+  },
+
   postulateAvanceResponse: {
     idproyecto: {},
   },

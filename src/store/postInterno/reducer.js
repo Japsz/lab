@@ -39,6 +39,8 @@ export default function (state = initialState, action) {
       return {
         ...state,
         addPostInternSuccess: false,
+        addPostInternLoading: false,
+        addPostInternError: false,
       }
     }
     case DEL_INTERN_POST_INIT: {

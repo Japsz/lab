@@ -15,11 +15,16 @@ import {
   PRE_APROVE_AVANCE_SUCCESS,
   PRE_APROVE_AVANCE_ERROR,
   PRE_APROVE_AVANCE_RESET,
-  POSTULATE_AVANCE_ERROR, POSTULATE_AVANCE_SUCCESS, POSTULATE_AVANCE_INIT, POSTULATE_AVANCE_RESET,
+  POSTULATE_AVANCE_ERROR,
+  POSTULATE_AVANCE_SUCCESS,
+  POSTULATE_AVANCE_INIT,
+  POSTULATE_AVANCE_RESET,
+  GET_AVANCE_INIT,
+  GET_AVANCE_SUCCESS, GET_AVANCE_ERROR, GET_AVANCE_RESET,
 
 } from "./const";
 
-import {delAvanceById, addAvance, addAvanceLike, preAproveAvance, postulateAvance} from "./server";
+import {delAvanceById, addAvance, addAvanceLike, preAproveAvance, postulateAvance, getAvanceById} from "./server";
 //Agregar Avance
 export const addAvanceAction = act => {
   return dispatch => {
@@ -84,4 +89,16 @@ export const delAvanceByIdAction = id => {
   }
 };
 export const resetDelAvanceAction = () => dispatch => dispatch({type:DEL_AVANCE_RESET})
+
+export const getAvanceByIdAction = id => {
+  return dispatch => {
+    dispatch({type: GET_AVANCE_INIT});
+    getAvanceById(id).then(response => {
+      dispatch({type: GET_AVANCE_SUCCESS, payload: response.data})
+    }).catch(() => {
+      dispatch({type: GET_AVANCE_ERROR})
+    })
+  }
+};
+export const resetGetAvanceByIdAction = () => dispatch => dispatch({type:GET_AVANCE_RESET})
 

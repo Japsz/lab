@@ -10,6 +10,8 @@ import {Provider as Redux} from "react-redux";
 import reduxStore from './store/store'
 
 import Footer from "./components/common/Footer";
+import PrivateRoute from "./components/common/PrivateRoute";
+import Login from "./views/Index/Login";
 
 function App() {
   const options = {
@@ -24,9 +26,11 @@ function App() {
           <Header/>
           <AlertProvider template={AlertTemplate} {...options}>
             <Switch>
-              <Route exact path={'/'} component={Index}/>
-              <Route path={'/proy/:id'} component={ProyWall}/>
-              <Route path={'/intern/:id/:section'} component={PrivateProyWall}/>
+              <Route exact path={'/login'} component={Login}/>
+              <PrivateRoute exact path={'/'} component={Index}/>
+              <PrivateRoute path={'/proy/:id'} component={ProyWall}/>
+              <PrivateRoute path={'/intern/:id/:section'} component={PrivateProyWall}/>
+              <Route component={Login}/>
             </Switch>
           </AlertProvider>
         </Router>

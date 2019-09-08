@@ -10,10 +10,41 @@ import {
   SET_AVANCE_LIKE_RESET,
   SET_AVANCE_LIKE_INIT,
   SET_AVANCE_LIKE_ERROR, PRE_APROVE_AVANCE_INIT, PRE_APROVE_AVANCE_SUCCESS, PRE_APROVE_AVANCE_ERROR, PRE_APROVE_AVANCE_RESET,
+  GET_AVANCE_ERROR, GET_AVANCE_INIT, GET_AVANCE_RESET, GET_AVANCE_SUCCESS,
 } from "./const";
 
 export default function (state = initialState, action) {
   switch (action.type) {
+    case GET_AVANCE_INIT: {
+      return {
+        ...state,
+        getAvanceSuccess: false,
+        getAvanceLoading: true,
+      }
+    }
+    case GET_AVANCE_SUCCESS: {
+      return {
+        ...state,
+        getAvanceSuccess: true,
+        getAvanceLoading: false,
+        getAvanceError: false,
+        getAvanceResponse: action.payload,
+      }
+    }
+    case GET_AVANCE_ERROR: {
+      return {
+        ...state,
+        getAvanceInit: false,
+        getAvanceLoading: false,
+        getAvanceError: true,
+      }
+    }
+    case GET_AVANCE_RESET: {
+      return {
+        ...state,
+        getAvanceSuccess: false,
+      }
+    }
     case ADD_AVANCE_INIT: {
       return {
         ...state,

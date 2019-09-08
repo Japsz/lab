@@ -18,9 +18,6 @@ class ShowAll extends React.Component{
     }
   };
 
-  componentDidMount () {
-    this.fetchMoreData();
-  };
   componentDidUpdate() {
     if (this.props.gotAdded){
       this.setState({...this.state, sols: [], hasMore: false})

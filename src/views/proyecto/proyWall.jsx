@@ -18,8 +18,8 @@ const ProyWall = (props) => {
     props.setProy(id)
   },[])
 
-  const {proy} = props
-  return(
+  const {proy, integrantes, userInfo} = props
+ return(
     <div className={'blog-content'}>
       <div className="container-fluid">
         <div className={'row'}>
@@ -27,7 +27,9 @@ const ProyWall = (props) => {
             <Link to={'/'}>
               <img src="/assets/img/lab/LAB_backArrow.png" className='go-back' alt="Volver"/>
             </Link>
-            <AddActs/>
+            {
+              integrantes.filter((item) => parseInt(item.iduser) === parseInt(userInfo.iduser)).length ? <AddActs/> : null
+            }
           </div>
           <div className="col-md-11">
             <div className="col-md-12 hidden-sm hidden-xs">
@@ -68,6 +70,8 @@ const ProyWall = (props) => {
 
 const mapStateToProps = state => ({
   proy: state.proys.proy.info,
+  integrantes: state.proys.proy.users,
+  userInfo: state.user.info,
 })
 
 const mapDispatchToProps = dispatch =>({

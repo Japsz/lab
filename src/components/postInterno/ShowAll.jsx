@@ -18,10 +18,8 @@ const ShowAll = (props) => {
 
   const [showModal, setShowModal] = useState(false)
 
-  useEffect(() => {
-    fetchMoreData()
-  }, [])
   const {isAddSuccess, lastAdded} = props
+
   useEffect(() => {
     if(isAddSuccess) {
       let data = {

@@ -17,10 +17,6 @@ class ShowAll extends React.Component{
       showModal: false
     }
   };
-
-  componentDidMount () {
-    this.fetchMoreData();
-  };
   componentDidUpdate() {
     if (this.props.gotAdded){
       this.setState({...this.state, avances: [], hasMore: false})
@@ -60,9 +56,9 @@ class ShowAll extends React.Component{
           endMessage={<div className={'col-md-12'}><p style={{alignSelf: 'center'}}><small>No queda nada que mostrar :c</small></p></div>}
         >
         {
-        this.state.avances.map((item, index) => {
-          return <Avance key={index} obj={item}/>
-        })
+          this.state.avances.map((item, index) => {
+            return <Avance key={index} obj={item}/>
+          })
         }
         </InfiniteScroll>
       </div>

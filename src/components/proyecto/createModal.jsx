@@ -13,7 +13,9 @@ const CreateModal = props => {
   const handlerOnChange = ({target: {name, value}}) => {
     setFormVal({...formVal, [name]: value})
   }
+
   const alert = useAlert()
+
   useEffect(() => {
     if (file) document.getElementById('fileUploadText').innerHTML = file.name
     else document.getElementById('fileUploadText').innerHTML = 'Sube una portada para tu proyecto'
