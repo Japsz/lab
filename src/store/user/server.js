@@ -1,7 +1,8 @@
 import axios from 'axios';
+import {ip} from '../../gateway'
 
 const API = axios.create({
-  baseURL: 'http://localhost:8081'
+  baseURL: ip
 })
 
 export const getLogin = async obj => await API.post('/user/login', obj);

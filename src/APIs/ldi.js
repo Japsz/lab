@@ -1,7 +1,8 @@
 import axios from 'axios';
+import {ip} from '../gateway'
 
 export default axios.create({
-  baseURL: `http://localhost:8081`,
+  baseURL: ip,
   headers: {
     authorization: localStorage.getItem('session-token'),
   }
