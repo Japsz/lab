@@ -17,7 +17,7 @@ const ShowAll = (props) => {
 
   const fetchMore = async () => {
     try{
-      const response = await labApi.get(`/internComment/getAll/${props.id}/${comments.list.length}`)
+      const response = await labApi.get(`internComment/getAll/${props.id}/${comments.list.length}`)
       setComments({list: comments.list.concat(response.data.rows), hasMore: response.data.hasMore})
     } catch(e){
       console.log(e)
