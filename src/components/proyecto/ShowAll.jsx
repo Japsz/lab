@@ -10,7 +10,7 @@ const ShowAll  = props => {
     hasMore: true,
   })
   const fetchMoreData = async () => {
-    const response = await labApi.get(`/proy/getAll/${state.proys.length}`);
+    const response = await labApi.get(`proy/getAll/${state.proys.length}`);
     if( response.status === 200) {
       setState({...state, proys: state.proys.concat(response.data.rows), hasMore: response.data.hasMore})
     } else console.log('Api error');

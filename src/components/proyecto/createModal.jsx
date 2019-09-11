@@ -27,7 +27,7 @@ const CreateModal = props => {
       const data = new FormData()
       data.append('file', file)
       try {
-        const fileUpload = await labApi.post("/upload", data, {
+        const fileUpload = await labApi.post("upload", data, {
           onUploadProgress: ProgressEvent => {
             console.log(formVal.fileLoad)
             setFormVal({

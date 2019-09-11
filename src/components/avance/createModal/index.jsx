@@ -27,7 +27,7 @@ const Index = (props) => {
     const uploadFile = async (file) => {
       const data = new FormData()
       data.append('file', file)
-      const fileUpload = await labApi.post("/upload", data, {
+      const fileUpload = await labApi.post("upload", data, {
         onUploadProgress: ProgressEvent => {
           console.log((ProgressEvent.loaded / ProgressEvent.total * 100))
         }

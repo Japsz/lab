@@ -28,7 +28,7 @@ class ShowAll extends React.Component{
   }
 
   fetchMoreData = async () => {
-    const response = await labApi.get(`/sol/getAll/${this.props.id}/${this.state.sols.length}`);
+    const response = await labApi.get(`sol/getAll/${this.props.id}/${this.state.sols.length}`);
     response.status === 200 ? this.setState({ ...this.state, sols: this.state.sols.concat(response.data.rows), hasMore: response.data.hasMore}) : console.log('Api error');
   };
 

@@ -20,7 +20,7 @@ export const getLoginAction = credentials => {
     getLogin(credentials).then(response => {
       if (response.data.err) dispatch({type: GET_LOGIN_ACTION_ERROR, payload: {msg: response.data.error}})
       else dispatch({type: GET_LOGIN_ACTION_SUCCESS, payload: response.data})
-    }).catch(() => {
+    }).catch((e) => {
       dispatch({type: GET_LOGIN_ACTION_ERROR, payload: {msg: 'Ocurrió un error desconocido'}})
     })
   }
