@@ -8,8 +8,8 @@ const API = axios.create({
   }
 })
 
-export const addCommentInterno = async obj => await API.post('/internComment/add', obj);
+export const addCommentInterno = async obj => await API.post('internComment/add', obj);
 
-export const addCommentInternoLike = async obj => await API.post('/internComment/like', obj);
+export const addCommentInternoLike = async obj => await API.post('internComment/like', obj);
 
-export const delCommentInternoById = async id => await API.get(`/internComment/del/${id}`);
+export const delCommentInternoById = async id => await API.get(`internComment/del/${id}`);
