@@ -36,13 +36,13 @@ const CreateModal = props => {
             })
           }
         })
-        props.addProy({...formVal, media: `/web-img/${fileUpload.data.filename}`, idcreador: props.userInfo.iduser, idobservatorio: props.userInfo.obs[0].idobservatorio})
+        props.addProy({...formVal, media: `/web-img/${fileUpload.data.filename}`, idcreador: props.userInfo.iduser})
       } catch (e) {
         console.log(e)
         alert.error('Error al crear la actualización')
       }
     } else {
-      const response = await props.addProy({...formVal, media:'no', idcreador: props.userInfo.iduser, idobservatorio: props.userInfo.obs[0].idobservatorio})
+      const response = await props.addProy({...formVal, media:'no', idcreador: props.userInfo.iduser})
       console.log(response);
     }
   }
