@@ -1,8 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import UserNav from './usrNav';
+import {connect} from "react-redux";
 
-const Header = () => {
+
+const Header = (props) => {
+    const {isLogged} = props
     return (
         <div className='navbar navbar-inverse navbar-material-blog navbar-absolute-top' style={{backgroundColor: '#009688'}}>
             <div className='navbar-wrapper container' style={{marginRight: 0, marginLeft: '5%', width: '90%'}}>
@@ -20,16 +23,21 @@ const Header = () => {
                         </div>
                     </Link>
                     <ul className='nav navbar-nav' style={{maxHeight: '50px'}}>
-                        <li>
-                            <Link to={'/'} className='navItem'>
-                                <h4>| Todos los proyectos |</h4>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to={'/user/proy'} className='navItem'>
-                                <h4>| Mis Proyectos |</h4>
-                            </Link>
-                        </li>
+
+                        { isLogged ?
+                          <>
+                              <li>
+                                  <Link to={'/'} className='navItem'>
+                                      <h4>| Todos los proyectos |</h4>
+                                  </Link>
+                              </li>
+                              <li>
+                                  <Link to={'/getMine/0'} className='navItem'>
+                                      <h4>| Mis Proyectos |</h4>
+                                  </Link>
+                              </li>
+                          </> : null
+                        }
                         <li>
                             <Link to={'/'} className='navItem'>
                                 <h4>| Como Funciona |</h4>
@@ -47,5 +55,8 @@ const Header = () => {
         </div>
     )
 };
+const mapStateToProps = state => ({
+    isLogged: state.user.isLogged
+})
 
-export default Header;
+export default connect(mapStateToProps)(Header);

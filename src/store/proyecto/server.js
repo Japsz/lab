@@ -5,8 +5,8 @@ const API = axios.create({
   baseURL: ip
 })
 
-export const addProy = async obj => await API.post('/proy/addProy', obj);
+export const addProy = async obj => await API.post('/proy/addProy', obj,{headers: {authorization: localStorage.getItem('session-token')}});
 
-export const addProyLike = async obj => await API.post('/proy/addLike', obj);
+export const addProyLike = async obj => await API.post('/proy/addLike', obj,{headers: {authorization: localStorage.getItem('session-token')}});
 
-export const getProyById = async id => await API.get(`/proy/info/${id}`);
+export const getProyById = async id => await API.get(`/proy/info/${id}`,{headers: {authorization: localStorage.getItem('session-token')}});

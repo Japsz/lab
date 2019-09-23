@@ -12,6 +12,7 @@ import reduxStore from './store/store'
 import Footer from "./components/common/Footer";
 import PrivateRoute from "./components/common/PrivateRoute";
 import Login from "./views/Index/Login";
+import MyProy from "./views/proyecto/myProy";
 
 function App() {
   const options = {
@@ -28,6 +29,7 @@ function App() {
             <Switch>
               <Route exact path={'/login'} component={Login}/>
               <PrivateRoute exact path={'/'} component={Index}/>
+              <PrivateRoute path={'/getMine'} component={MyProy}/>
               <PrivateRoute path={'/proy/:id'} component={ProyWall}/>
               <PrivateRoute path={'/intern/:id/:section'} component={PrivateProyWall}/>
               <Route component={Login}/>

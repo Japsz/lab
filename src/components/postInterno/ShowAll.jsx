@@ -37,7 +37,7 @@ const ShowAll = (props) => {
     }
   }, [isAddSuccess, lastAdded])
   const fetchMoreData = async () => {
-    const response = await labApi.get(`internPost/getAll/${props.id}/${state.posts.length}`);
+    const response = await labApi.get(`internPost/getAll/${props.id}/${state.posts.length}`,{headers: {authorization: localStorage.getItem('session-token')}});
     response.status === 200 ? setState({hasMore: response.data.hasMore, posts: state.posts.concat(response.data.rows)}) : console.log('Api error');
   };
   return(

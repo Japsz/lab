@@ -14,9 +14,6 @@ class ShowAll extends React.Component{
       hasMore: true
     }
   };
-  componentDidMount () {
-    this.fetchMoreData();
-  };
   componentDidUpdate() {
     if (this.props.gotAdded){
       this.setState({...this.state, acts: [], hasMore: false})
@@ -26,7 +23,7 @@ class ShowAll extends React.Component{
     }
   }
   fetchMoreData = async () => {
-    const response = await labApi.get(`acts/getAll/${this.props.id}/${this.state.acts.length}`);
+    const response = await labApi.get(`acts/getAll/${this.props.id}/${this.state.acts.length}`,{headers: {authorization: localStorage.getItem('session-token')}});
     response.status === 200 ? this.setState({acts: this.state.acts.concat(response.data.rows), hasMore: response.data.hasMore}) : console.log('Api error');
   };
   render () {
