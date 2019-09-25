@@ -8,7 +8,7 @@ class Single extends React.Component{
       return (
         <section className="blog-post" id={idactualizacion}>
           <div className="panel panel-default">
-            {tipo === 3 ? <img src={`http://localhost:8081${principal}`} alt='Foto de portada' style={{width: 'auto', margin:'auto', display: 'block'}} className={'img-responsive'}/> : null}
+            {tipo === 3 ? <img src={`/quantumapi${principal}`} alt='Foto de portada' style={{width: 'auto', margin:'auto', display: 'block'}} className={'img-responsive'}/> : null}
             {tipo === 4 ? <div dangerouslySetInnerHTML={{ __html: principal}}></div> : null}
             <div className="panel-body">
               <div className="blog-post-content">

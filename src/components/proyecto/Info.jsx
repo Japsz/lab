@@ -17,7 +17,7 @@ const Info = props => {
             {
               if((parseInt(item.iduser) === parseInt(props.userInfo.iduser)) && !isMember) setIsMember(true)
               return (<div className="proy-colaborator" style={{display: 'flex', margin: '10px'}} key={index}>
-                <img src={`http://localhost:8081${item.avatar_pat}`}  className={'img-responsive img-circle'} alt={'Icono'} style={{margin: 0, height: '30px', width:'30px'}} />
+                <img src={`/quantumapi${item.avatar_pat}`}  className={'img-responsive img-circle'} alt={'Icono'} style={{margin: 0, height: '30px', width:'30px'}} />
                 <p style={{marginLeft: '10px'}}>{item.username}</p>
                 <span className={`label ${parseInt(idcreador) === parseInt(item.iduser) ? 'label-danger' : 'label-primary'}`} style={{marginLeft: '4px'}}>
                   {parseInt(idcreador) === parseInt(item.iduser) ? 'Creador' : item.badge}

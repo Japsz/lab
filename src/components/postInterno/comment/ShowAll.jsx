@@ -58,7 +58,7 @@ const ShowAll = (props) => {
         comments.list.map((item, index) =>
           <div className="well comment-space" key={index}>
             <div style={{width: '20%', display: 'inline-block'}}>
-              <img className="img-responsive img-circle pull-left img_40" src={`http://localhost:8081${item.avatar_pat}`}/>
+              <img className="img-responsive img-circle pull-left img_40" src={`/quantumapi${item.avatar_pat}`}/>
             </div>
             <div style={{width: '70%', display: 'inline-flex', textAlign: 'center', height:'auto', alignContent: 'center'}}>
               {item.texto}

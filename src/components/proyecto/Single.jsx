@@ -13,7 +13,7 @@ class Single extends React.Component{
               <p className="blog-post-date">etapa: {etapa} | {new Date(creacion).toLocaleDateString()}</p>
             </div>
             <div className="blog-post-content">
-              <img src={media !== 'no' ? `http://localhost:8081${media}` : '/assets/img/lab/LAB_imgPlaceholder.png'} alt='Foto de portada' style={{width: 'auto', margin:'auto', display: 'block', paddingBottom: '5%'}} className={'img-responsive'}/>
+              <img src={media !== 'no' ? `/quantumapi${media}` : '/assets/img/lab/LAB_imgPlaceholder.png'} alt='Foto de portada' style={{width: 'auto', margin:'auto', display: 'block', paddingBottom: '5%'}} className={'img-responsive'}/>
               <h2 className="blog-post-title">{titulo}</h2>
               <p>{descripcion}</p>
               <img src={iconouser} style={{width: '30px', height: '30px', margin: 0, display: 'block'}} alt={'iconouser'} className="img-circle img-responsive pull-left"/>
