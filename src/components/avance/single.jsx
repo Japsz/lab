@@ -16,7 +16,7 @@ class Single extends React.Component{
                       <h4 className='blog-post-title'>{item[0]}</h4>
                       {
                         parseInt(item[1]) ?
-                          <a href={`http://localhost:8081/web-img/${item[2]}`} className='addSol' target='_blank' download={`archivoAvance${idavance}`} >Descargar Archivo</a>
+                          <a href={`/quantumapi/web-img/${item[2]}`} className='addSol' target='_blank' download={`archivoAvance${idavance}`} >Descargar Archivo</a>
                           : <p className="text-center">{item[2]}</p>
                       }
                     </div>)

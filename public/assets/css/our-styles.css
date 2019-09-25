@@ -98,7 +98,7 @@ label{
 /* Textos */
 @font-face {
     font-family: "Helvetica LighCond";
-    src: url("../fonts/HelveticaLTStd-LightCond.otf");
+    src: url("./../fonts/HelveticaLTStd-LightCond.otf");
 }
 
 h1{

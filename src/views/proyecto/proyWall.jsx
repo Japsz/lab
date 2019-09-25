@@ -49,7 +49,7 @@ const ProyWall = (props) => {
                 <div className='proy-body'>
                   <div className='col-md-12'>
                     <p>
-                      <img src={`http://localhost:8081${proy.media}`} alt="Imagen de Portada" className='img-thumbnail' style={{float: 'left', margin: '10px'}}/>
+                      <img src={`/quantumapi${proy.media}`} alt="Imagen de Portada" className='img-thumbnail' style={{float: 'left', margin: '10px'}}/>
                       {proy.descripcion}
                     </p>
                   </div>

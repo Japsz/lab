@@ -22,7 +22,7 @@ const UserNav = props => {
       {props.isLogged ?
         <Fragment>
           <li>
-            <img className='navbar-link navbar-brand img-circle material-icons' style={{margin: 'auto', display: 'block', width: '60px', height: '60px'}} alt={'Foto de perfil'} src={avatar_pat ? `http://localhost:8081${avatar_pat}` : '/assets/img/placeholder.png'}/>
+            <img className='navbar-link navbar-brand img-circle material-icons' style={{margin: 'auto', display: 'block', width: '60px', height: '60px'}} alt={'Foto de perfil'} src={(avatar_pat && avatar_pat !== '/assets/img/placeholder.png') ? `/quantumapi${avatar_pat}` : '/assets/img/placeholder.png'}/>
           </li>
           <li>
             <a href={'#'} onClick={() => props.logout()} className='navbar-link'>Salir</a>
