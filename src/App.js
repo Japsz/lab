@@ -35,6 +35,7 @@ function App() {
               <Route component={Login}/>
             </Switch>
           </AlertProvider>
+          <Footer/>
         </Router>
     </Redux>
   );

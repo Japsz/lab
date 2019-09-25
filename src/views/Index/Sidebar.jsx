@@ -10,7 +10,7 @@ const Sidebar = props => {
   return (
     <div className="sidebar-module" >
       <ul className="list-group">
-        {props.isLogged ?
+        {props.isLogged && parseInt(props.tipo) === 3 ?
           <li className="list-group-item">
             <a href='#' onClick={() => setShowModal(true)}>
               <img src="/assets/img/lab/LAB_mas.png" className='img_40' alt="add"/>
@@ -49,6 +49,7 @@ const Sidebar = props => {
 };
 
 const mapStateToProps = state => ({
+  tipo: state.user.info.tipo,
   isLogged: state.user.isLogged
 })
 

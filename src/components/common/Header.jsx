@@ -39,14 +39,9 @@ const Header = (props) => {
                           </> : null
                         }
                         <li>
-                            <Link to={'/'} className='navItem'>
-                                <h4>| Como Funciona |</h4>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to={'/'} className='navItem'>
+                            <a href="https://www.observaciudadania.org/" target="_blank" className='navItem'>
                                 <h4>| Nosotros ObservaCiudadanía |</h4>
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                     <UserNav/>

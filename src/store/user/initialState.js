@@ -15,13 +15,10 @@ export const initialState = {
   getLogoutResponse: {},
 
   info: {
-    iduser: 7,
-    username: 'ciudadano',
+    iduser: 0,
+    username: '',
     avatar_pat: '/assets/img/placeholder.png',
-    obs: [{
-      idobservatorio: 1,
-      nombre: 'obs1',
-    }]
+    tipo: 0,
   },
   isLogged: false
 }
