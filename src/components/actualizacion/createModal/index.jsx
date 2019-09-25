@@ -72,8 +72,7 @@ const Index = (props) => {
         alert('Error al crear la actualización')
       }
     } else {
-      props.addProy({...formVal})
-      props.onHide()
+      alert('Es necesario subir un archivo')
     }
   }
   if (props.isSuccess) {
@@ -94,7 +93,6 @@ const Index = (props) => {
                 <Filedrop onFilesAddedCb={(file) => setFile(file)} placeholderText={'Sube/Arrastra una foto'}/>
               </div>
               : null }
-            <input type='text' name='principal' value={formVal.principal} className='form-control modal-input' onChange={handlerOnChange} placeholder={modalStyle.placeholder} required />
             <div className="form-group" style={{width:'100%'}}>
               <label htmlFor='descripcion' className='modal-input'>Describe el/la {modalStyle.title} que estas compartiendo</label>
               <textarea onChange={handlerOnChange} className='modal-textarea' name='contenido' value={formVal.contenido}></textarea>
