@@ -16,7 +16,7 @@ class Single extends React.Component{
               <img src={media !== 'no' ? `/quantumapi${media}` : '/assets/img/lab/LAB_imgPlaceholder.png'} alt='Foto de portada' style={{width: 'auto', margin:'auto', display: 'block', paddingBottom: '5%'}} className={'img-responsive'}/>
               <h2 className="blog-post-title">{titulo}</h2>
               <p>{descripcion}</p>
-              <img src={iconouser} style={{width: '30px', height: '30px', margin: 0, display: 'block'}} alt={'iconouser'} className="img-circle img-responsive pull-left"/>
+              <img src={(iconouser && iconouser !== '/assets/img/placeholder.png') ? `/quantumapi${iconouser}` : '/assets/img/placeholder.png'} style={{width: '30px', height: '30px', margin: 0, display: 'block'}} alt={'iconouser'} className="img-circle img-responsive pull-left"/>
               <div className="blog-post-share pull-left" >
                 <div className="vertical-center">
                   por {username}

@@ -23,7 +23,7 @@ class Single extends React.Component{
                   })
                 }
                 <div className="blog-post-share pull-left" style={{marginLeft: '6px', display: 'flex'}}>
-                  <img src={userToken[1]} style={{width: '30px', height: '30px', margin: 0, display: 'block'}} className="img-circle img-responsive pull-left"/>
+                  <img src={(userToken[1] && userToken[1] !== '/assets/img/placeholder.png') ? `/quantumapi${userToken[1]}` : '/assets/img/placeholder.png'} style={{width: '30px', height: '30px', margin: 0, display: 'block'}} className="img-circle img-responsive pull-left"/>
                   <h5 style={{marginLeft: '10px'}}>{userToken[0]}</h5>
                 </div>
                 <div className='blog-post-share pull-right'>

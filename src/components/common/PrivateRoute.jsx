@@ -6,7 +6,7 @@ import {checkTokenAction, resetCheckTokenAction} from "../../store/user/action";
 
 const PrivateRoute = (props) => {
 
-  const {info, isLogged} = props
+  const {isLogged} = props
   const token = localStorage.getItem('session-token')
 
   if (token === null) {

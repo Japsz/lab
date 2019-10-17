@@ -38,13 +38,15 @@ const ShowAll = (props) => {
       setFormVal({texto: '', idpost: id, iduser: props.userInfo.iduser})
     }
   }, [isSuccess])
+  const {avatar_pat: iconouser} = props.userInfo
+
   return (
     <>
       <h2 className='comment-title'>Comentarios</h2>
       <div className='well'>
         <form onSubmit={handleSubmit}>
           <div style={{width: '10%', display: 'inline-block'}}>
-            <img className="img-responsive img-circle pull-left img_40" src={props.userInfo.avatar_pat} alt={'Foto de perfil'}/>
+            <img className="img-responsive img-circle pull-left img_40" src={(iconouser && iconouser !== '/assets/img/placeholder.png') ? `/quantumapi${iconouser}` : '/assets/img/placeholder.png'} alt={'Foto de perfil'}/>
           </div>
           <div style={{width: '80%', display: 'inline-block'}}>
             <textarea name="texto" id="commtxt" className='form-control' value={formVal.texto} onChange={(e) => setFormVal({...formVal, texto: e.target.value})} required/>
@@ -58,7 +60,7 @@ const ShowAll = (props) => {
         comments.list.map((item, index) =>
           <div className="well comment-space" key={index}>
             <div style={{width: '20%', display: 'inline-block'}}>
-              <img className="img-responsive img-circle pull-left img_40" src={`/quantumapi${item.avatar_pat}`}/>
+              <img className="img-responsive img-circle pull-left img_40" src={(item.avatar_pat && item.avatar_pat !== '/assets/img/placeholder.png') ? `/quantumapi${item.avatar_pat}` : '/assets/img/placeholder.png'}/>
             </div>
             <div style={{width: '70%', display: 'inline-flex', textAlign: 'center', height:'auto', alignContent: 'center'}}>
               {item.texto}

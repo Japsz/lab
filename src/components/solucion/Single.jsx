@@ -12,7 +12,7 @@ class Single extends React.Component{
             <div className="blog-post-content">
               <h4 className={'text-center'}>{contenido}</h4>
               <div className="blog-post-share pull-left" style={{marginLeft: '6px', display: 'flex'}}>
-                <img src={iconouser} style={{width: '30px', height: '30px', margin: 0, display: 'block'}} className="img-circle img-responsive pull-left"/>
+                <img src={(iconouser && iconouser !== '/assets/img/placeholder.png') ? `/quantumapi${iconouser}` : '/assets/img/placeholder.png'} style={{width: '30px', height: '30px', margin: 0, display: 'block'}} className="img-circle img-responsive pull-left"/>
                 <h5 style={{marginLeft: '10px'}}>{username}</h5>
               </div>
               {

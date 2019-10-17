@@ -14,7 +14,7 @@ class Single extends React.Component{
               <div className="blog-post-content">
                 {tipo === 2 ? <h2 className="blog-post-title">{principal}</h2> : null }
                 <p>{contenido}</p>
-                <img src={iconouser} style={{width: '30px', height: '30px', margin: 0, display: 'block'}} className="img-circle img-responsive pull-left"/>
+                <img src={(iconouser && iconouser !== '/assets/img/placeholder.png') ? `/quantumapi${iconouser}` : '/assets/img/placeholder.png'} style={{width: '30px', height: '30px', margin: 0, display: 'block'}} className="img-circle img-responsive pull-left"/>
                 <div className="blog-post-share pull-left" style={{marginLeft: '6px', display: 'flex'}}>
                   {username}
                 </div>
@@ -40,7 +40,7 @@ class Single extends React.Component{
                       <div className="well">
                         <div className='text-center' style={{margin: '5px'}}>{contenido}</div>
                       </div>
-                      <img src={iconouser} alt='iconouser' className="img-circle img-responsive img_40"/>
+                      <img src={(iconouser && iconouser !== '/assets/img/placeholder.png') ? `/quantumapi${iconouser}` : '/assets/img/placeholder.png'} alt='iconouser' className="img-circle img-responsive img_40"/>
                       <span style={{marginLeft: '6px'}}>
                         {username}
                       </span>

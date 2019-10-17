@@ -3,7 +3,7 @@ import ShowAll from "./comment/ShowAll";
 import {Collapse} from "react-collapse";
 
 const Single = (props) => {
-  const {username,iconouser, fecha, texto1, idpostinterno} = props.obj;
+  const {username, iconouser, fecha, texto1, idpostinterno} = props.obj;
   const [showComments, setShowComments] = useState(false)
   return (
     <section className="blog-post" id={idpostinterno}>
@@ -11,7 +11,7 @@ const Single = (props) => {
         <div className="panel-body">
           <div className="blog-post-content">
             <h4 className={'text-center'}>{texto1}</h4>
-            <img src={iconouser} style={{width: '30px', height: '30px', margin: 0, display: 'block'}} className="img-circle img-responsive pull-left"/>
+            <img src={(iconouser && iconouser !== '/assets/img/placeholder.png') ? `/quantumapi${iconouser}` : '/assets/img/placeholder.png'} style={{width: '30px', height: '30px', margin: 0, display: 'block'}} className="img-circle img-responsive pull-left"/>
             <div className="blog-post-share pull-left" style={{marginLeft: '6px', display: 'flex'}}>
               <h5 style={{marginLeft: '10px'}}>{username}</h5>
             </div>
